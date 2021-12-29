@@ -1,0 +1,121 @@
+//Общие настройки
+.header__container {
+    display: flex;
+}
+
+.header__link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+
+    &--current {
+        color: $accent-color;
+        position: relative;
+    }
+}
+
+//Элемент-подчеркивание под активной ссылкой
+.header__link--current::after {
+    content: "";
+    width: 100%;
+    height: 4px;
+    background-color: $accent-color;
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    border-radius: 2px;
+}
+
+.header__nav {
+    display: flex;
+    padding-bottom: 0;
+    padding-top: 0;
+    align-items: center;
+    background-color: $primary-white-color;
+    border-bottom: 1px solid #ECECEC;
+}
+
+//Навигация по сайту
+.site-nav__container {
+    margin: 0;
+    padding: 0;
+
+    .site-nav__list {
+        display: flex;
+        margin-left: 94px;
+    }
+}
+
+.site-nav__item {
+    margin-right: 50px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+}
+
+//Контакты в хедере
+.auth-nav__container {
+    margin: 0 0 0 auto;
+    padding: 0;
+
+    .auth-nav__list {
+        display: flex;
+        align-items: center;
+
+        .header__link {
+            display: flex;
+            color: $primary-text-color;
+        }
+    }
+}
+
+.auth-nav__list {
+
+    .header__link {
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+
+        &:hover,
+        &:focus {
+            color: $accent-color;
+        }
+    }
+}
+
+.auth-nav-list__item {
+    
+    &+& {
+    margin-left: 30px;
+    }
+}
+
+//Иконки контактов в хедере
+.auth-nav__link-container {
+
+    .header__link {
+        align-items: center;
+    }
+}
+
+.auth-nav__icon {
+    margin-right: 10px;
+    fill: currentColor;
+}

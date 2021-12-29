@@ -1,0 +1,83 @@
+//Подвал
+.footer__box {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-contacts {
+    background-color: $accent-background-color;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.address {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+
+}
+
+.footer-logo__box {
+    margin-bottom: 20px;
+}
+
+.footer-contacts__link {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: $contacts-color;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+    }
+}
+
+.address__link {
+    color: $primary-white-color;
+}
+
+.footer-contacts__item {
+    margin-bottom: 9px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/*Присоединяйтесь*/
+.footer-social-contacts {
+    margin: 72px 0 100px 98px;
+    padding: 0;
+
+    ul {
+        display: flex;
+    }
+//Иконки соцсетей в футере
+    .circle {
+        background-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .social__icon {
+        fill: $primary-white-color;
+    }
+}
+
+//Иконки соцсетей при наведении
+.social__link:hover,
+.social__link:focus {
+    background-color: $accent-color;
+}  
+
+.footer-social__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $primary-white-color;
+    margin-bottom: 20px;
+}
