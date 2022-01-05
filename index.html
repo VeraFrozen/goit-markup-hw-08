@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./css/main.min.css"/>
 </head>
 <body>
-    <!--Шапка сайта-->
+    <!--Шапка сайта
     <header class="header">
         <div class="container header__container">
             <nav class="header__nav">
@@ -50,7 +50,7 @@
         </div>      
     </header>
     <main>
-        <!--Баннер-->
+        <!--Баннер
         <section class="hero">
             <div class="hero__overlay">
                 <div class="hero__container">
@@ -58,8 +58,8 @@
                     <button type="button" class="hero__button" data-modal-open>Заказать услугу</button>
                 </div> 
             </div>
-        </section >
-        <!--Особенности-->
+        </section >-->
+        <!--Особенности
         <section class="features">
             <div class="container features__container">
                 <h2 class="section__title visually-hidden">Особенности</h2>
@@ -113,27 +113,27 @@
                     </div>
             </div>
         </section>
-        <!--Чем мы занимаемся-->
+        Чем мы занимаемся
         <section class="works">
-            <div class="container works-container">
+            <div class="container works__container">
                 <h2 class="section__title">Чем мы занимаемся</h2>
                 <div class="work__set">
                     <ul class=" list work__list">
                         <li>
                             <div class="work__item">
-                                <img src="./images/imgbox1.jpg" alt="Разработчик пишет программу по алгоритму на компьютере" width="370" height="294">
+                                <img srcset="./images/imgbox1.jpg 1x, ./images/imgbox1@2x.jpg 2x" src="./images/imgbox1.jpg" alt="Разработчик пишет программу по алгоритму на компьютере" width="370" height="294">
                                 <p class="work-label__text">Десктопные приложения</p>                 
                             </div>
                         </li>
                         <li>
                             <div class="work__item">
-                                <img src="./images/imgbox2.jpg" alt="Разработчик выбирает формат разметки приложения для смартфона на ноутбуке" width="370" height="294">
+                                <img srcset="./images/imgbox2.jpg 1x, ./images/imgbox2@2x.jpg 2x" src="./images/imgbox2.jpg" alt="Разработчик выбирает формат разметки приложения для смартфона на ноутбуке" width="370" height="294">
                                 <p class="work-label__text">Мобильные приложения</p>
                             </div>
                         </li>
                         <li>
                             <div class="work__item">
-                                <img src="./images/imgbox3.jpg" alt="Разработчик выбирает цветовую гамму на Ай-Паде" width="370" height="294">
+                                <img srcset="./images/imgbox3.jpg 1x, ./images/imgbox3@2x.jpg 2x" src="./images/imgbox3.jpg" alt="Разработчик выбирает цветовую гамму на Ай-Паде" width="370" height="294">
                                 <p class="work-label__text">Дизайнерские решения</p>
                             </div>
                         </li>
@@ -149,7 +149,18 @@
                 <ul class="list">
                     <li class="team__item">
                         <div class="team__thumb">
-                            <img src="./images/teamcard1.jpg" alt="Фото Игоря Демьяненко" width="270" height="260">
+                            <picture>
+                                <source
+                                    srcset="./images/teamcard1-270.jpg 1x, ./images/teamcard1-270@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source
+                                    srcset="./images/teamcard1-354.jpg 1x, ./images/teamcard1-354@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source
+                                    srcset="./images/teamcard1-450.jpg 1x, ./images/teamcard1-450@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img  src="./images/teamcard1-450.jpg" alt="Фото Игоря Демьяненко" />
+                            </picture>
                         </div>
                         <div class="team__content">
                             <h3 class="team-card__title">Игорь Демьяненко</h3>
@@ -196,7 +207,18 @@
                     </li>
                     <li class="team__item">
                         <div class="team__thumb">
-                            <img src="./images/teamcard2.jpg" alt="Фото Ольги Репиной" width="270" height="260">
+                            <picture>
+                                <source
+                                    srcset="./images/teamcard2-270.jpg 1x, ./images/teamcard2-270@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source
+                                    srcset="./images/teamcard2-354.jpg 1x, ./images/teamcard2-354@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source
+                                    srcset="./images/teamcard2-450.jpg 1x, ./images/teamcard2-450@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img  src="./images/teamcard2-450.jpg" alt="Фото Ольги Репиной" />
+                            </picture>
                         </div>
                         <div class="team__content">
                             <h3 class="team-card__title">Ольга Репина</h3>
@@ -243,7 +265,18 @@
                     </li>
                     <li class="team__item">
                         <div class="team__thumb">
-                            <img src="./images/teamcard3.jpg" alt="Фото Николая Тарасова" width="270" height="260">
+                            <picture>
+                                <source
+                                    srcset="./images/teamcard3-270.jpg 1x, ./images/teamcard3-270@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source
+                                    srcset="./images/teamcard3-354.jpg 1x, ./images/teamcard3-354@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source
+                                    srcset="./images/teamcard3-450.jpg 1x, ./images/teamcard3-450@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img  src="./images/teamcard3-450.jpg" alt="Фото Николая Тарасова" />
+                            </picture>
                         </div>
                         <div class="team__content">
                             <h3 class="team-card__title">Николай Тарасов</h3>
@@ -290,7 +323,18 @@
                     </li>
                     <li class="team__item">
                         <div class="team__thumb">
-                            <img src="./images/teamcard4.jpg" alt="Фото Михаила Ермакова" width="270" height="260">
+                            <picture>
+                                <source
+                                    srcset="./images/teamcard4-270.jpg 1x, ./images/teamcard4-270@2x.jpg 2x"
+                                    media="(min-width: 1200px)">
+                                <source
+                                    srcset="./images/teamcard4-354.jpg 1x, ./images/teamcard4-354@2x.jpg 2x"
+                                    media="(min-width: 768px)">
+                                <source
+                                    srcset="./images/teamcard4-450.jpg 1x, ./images/teamcard4-450@2x.jpg 2x"
+                                    media="(min-width: 480px)">
+                                <img  src="./images/teamcard4-450.jpg" alt="Фото Михаила Ермакова" />
+                            </picture>
                         </div>
                         <div class="team__content">
                             <h3 class="team-card__title">Михаил Ермаков</h3>
@@ -339,7 +383,7 @@
                 </div>
             </div>
         </section>
-        <!--Постоянные клиенты-->
+        <!--Постоянные клиенты
         <section class="clients">
             <div class="container clients__container">
                 <h2 class="section__title">Постоянные элементы</h2>
@@ -404,18 +448,18 @@
             </div>
         </section>
     </main>
-    <!--Подвал-->
+    Подвал
     <footer class="footer">
         <section class="footer-contacts">
             <div class="container footer__box">
-        <!--О нас-->
+        О нас
                 <div class="footer-contacts__box">
                     <div class="address">
-        <!--Логотип-->
+        Логотип
                         <div class="footer-logo__box">
                             <a href="./index.html" class="logo header__logo--inverse"><span class="logo--accent">Web</span>Studio</a>
                         </div>
-        <!--Контакты-->
+        Контакты
                         <address class="footer-contacts__address">
                             <ul class="footer-contacts__list list">
                                 <li class="footer-contacts__item">
@@ -431,7 +475,7 @@
                         </address>
                     </div>
                 </div>
-        <!--Присоединяйся-->
+        Присоединяйся
                 <div class="footer-social-contacts">
                     <h2 class="footer-social__title">Присоединяйтесь</h2>
                     <ul class="list social__list">
@@ -473,7 +517,7 @@
                         </li>
                     </ul>
                 </div>
-        <!--Подписывайся на рассылку-->
+        Подписывайся на рассылку
                 <div class="subscribe">
                     <form class="footer-subscribe-form">
                         <div class="footer-form__field">
@@ -497,7 +541,7 @@
             </div>    
         </section>
     </footer>
-    <!--Модальное окно-->
+    Модальное окно
     <div class="backdrop is-hidden" data-modal>
         <div class="modal-window">
             <div class="button-close__field">
@@ -573,7 +617,7 @@
             </form>
         </div>
     </div> 
-    <script src="./js/modal.js"></script>   
+    <script src="./js/modal.js"></script>-->  
 </body>
 </html>
 
