@@ -1,8 +1,18 @@
 //Подвал
 .footer__box {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    width: 100%;
+
+    @media screen and (min-width: 768px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+    }
 }
 
 .footer-contacts {
@@ -11,11 +21,26 @@
     margin-bottom: 0;
 }
 
+.footer-contacts__box {
+    width: 100%;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
 .address {
     padding-top: 60px;
     padding-bottom: 60px;
 
+    @media screen and (min-width: 768px) {
+    min-width: 369px;
+    }
 
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
 }
 
 .footer-logo__box {
@@ -40,6 +65,9 @@
 }
 
 .footer-contacts__item {
+    margin-bottom: 8px;
+    
+    @media screen and (min-width: 1200px) {
     margin-bottom: 9px;
 
     &:last-child {
@@ -49,12 +77,28 @@
 
 /*Присоединяйтесь*/
 .footer-social-contacts {
-    margin: 72px 0 100px 98px;
-    padding: 0;
+    //width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        min-width: 369px;
+    }
 
     ul {
+        //width: 100%;
         display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 1200px) {
+            margin-left: 72px;
+            margin-right: 98px;
+            padding: 0;
+        }
     }
+}
+
 //Иконки соцсетей в футере
     .circle {
         background-color: rgba(255, 255, 255, 0.1);
@@ -80,4 +124,8 @@
     text-transform: uppercase;
     color: $primary-white-color;
     margin-bottom: 20px;
+
+    @media screen and (max-width: 1199px) {
+        text-align: center;
+    }
 }
