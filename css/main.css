@@ -269,8 +269,10 @@ body * {
 }
 
 .hero {
-  background-color: #2F303A;
-  text-align: center;
+  min-height: 400px;
+  background-size: cover;
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-480.jpg);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-480.jpg);
 }
 
 @media screen and (max-width: 1199px) {
@@ -287,48 +289,29 @@ body * {
   }
 }
 
-.hero__overlay {
-  max-width: 767px;
-  min-height: 400px;
-  margin-left: auto;
-  margin-right: auto;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-}
-
-@media screen and (min-width: 480px) {
-  .hero__overlay {
-    background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-480.jpg);
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-480.jpg);
-  }
-}
-
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero__overlay .hero__container {
+  .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-480@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-480@2x.jpg);
   }
 }
 
 @media screen and (min-width: 768px) {
-  .hero__overlay {
-    max-width: 1199px;
-    min-height: 400px;
+  .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-768.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-768.jpg);
   }
 }
 
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero__overlay .hero__container {
+  .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-768@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-768@2x.jpg);
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .hero__overlay {
+  .hero {
     max-width: 1600px;
     min-height: 600px;
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-1600.jpg);
@@ -337,7 +320,7 @@ body * {
 }
 
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero__overlay .hero__container {
+  .hero {
     background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-1600@2x.jpg);
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/hero-1600@2x.jpg);
   }
@@ -351,6 +334,13 @@ body * {
   text-transform: uppercase;
   color: #ffffff;
   margin-bottom: 30px;
+  text-align: center;
+}
+
+@media screen and (max-width: 479px) {
+  .hero__title {
+    font-size: 20px;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -361,14 +351,13 @@ body * {
 }
 
 .hero__button {
+  display: block;
+  margin: 0 auto;
   min-width: 200px;
   font-family: inherit;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   letter-spacing: 0.06em;
   background-color: #2196F3;
   color: #ffffff;
@@ -1358,6 +1347,7 @@ body * {
 .backdrop {
   width: 100%;
   height: 100%;
+  padding: 93px 15px;
   overflow-y: scroll;
   top: 0;
   opacity: 1;
@@ -1368,7 +1358,7 @@ body * {
 }
 
 .modal-window {
-  width: 90%;
+  width: 100%;
   min-height: 609px;
   background-color: #ffffff;
   -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);

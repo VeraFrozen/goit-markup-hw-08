@@ -1,8 +1,5 @@
 //Баннер
 .hero {
-    background-color: $accent-background-color;
-    text-align: center;
-
     &__container {
         @media screen and (max-width: 1199px) {
             padding-top: 118px;
@@ -14,47 +11,32 @@
             padding-bottom: 200px;
         }
     }
-}
+//}
 
 //Фон на герое
-.hero__overlay {
-    max-width: 767px;
+//.hero__overlay {
+    //max-width: 767px;
     min-height: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    background-repeat: no-repeat;
-    background-position: center;
+    //margin-left: auto;
+    //margin-right: auto;
+    //background-repeat: no-repeat;
+    //background-position: center;
     background-size: cover;
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/hero-480.jpg);
 
-    @media screen and (min-width: 480px) {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-url(../images/hero-480.jpg);
-    }
-
-    @media (min-device-pixel-ratio: 2),
-        (min-resolution: 192dpi),
-        (min-resolution: 2dppx) {
-        .hero__container {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
         url(../images/hero-480@2x.jpg);
-        }
     }
 
     @media screen and (min-width: 768px) {
-        max-width: 1199px;
-        min-height: 400px;
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-768.jpg);
 
-        @media (min-device-pixel-ratio: 2),
-            (-webkit-min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-
-            .hero__container {
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url(../images/hero-768@2x.jpg);
-            }
         }
     }
 
@@ -64,15 +46,9 @@ url(../images/hero-480.jpg);
         background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
     url(../images/hero-1600.jpg);
 
-        @media (min-device-pixel-ratio: 2),
-            (-webkit-min-device-pixel-ratio: 2),
-            (min-resolution: 192dpi),
-            (min-resolution: 2dppx) {
-
-            .hero__container {
+        @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
             background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
             url(../images/hero-1600@2x.jpg);
-            }
         }
     }
 }
@@ -86,6 +62,11 @@ url(../images/hero-480.jpg);
     text-transform: uppercase;
     color: $primary-white-color;
     margin-bottom: 30px;
+    text-align: center;
+
+    @media screen and (max-width: 479px) {
+        font-size: 20px;
+    }
 
     @media screen and (min-width: 1200px) {
         font-size: 44px;
@@ -95,12 +76,13 @@ url(../images/hero-480.jpg);
 
 //Кнопка вызова модального окна
 .hero__button {
+    display: block;
+    margin: 0 auto;
     min-width: 200px;
     font-family: inherit;
     font-weight: 700;
     font-size: 16px;
     line-height: 1.88;
-    align-items: center;
     letter-spacing: 0.06em;
     background-color: $accent-color;
     color: $primary-white-color;
