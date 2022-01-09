@@ -37,11 +37,6 @@ body {
   background-color: #ffffff;
 }
 
-body * {
-  -webkit-box-shadow: 0 0 5px 1px #ff0000;
-          box-shadow: 0 0 5px 1px #ff0000;
-}
-
 .container {
   width: 100%;
   margin: 0 auto;
