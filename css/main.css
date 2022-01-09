@@ -37,8 +37,12 @@ body {
   background-color: #ffffff;
 }
 
+body * {
+  -webkit-box-shadow: 0 0 5px 1px #ff0000;
+          box-shadow: 0 0 5px 1px #ff0000;
+}
+
 .container {
-  width: 100%;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -956,48 +960,66 @@ body {
   }
 }
 
-.clients__list {
-  margin-right: -30px;
-}
-
 .clients__list ul {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  margin-right: -30px;
 }
 
 @media screen and (max-width: 1199px) {
   .clients__list ul {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    margin-bottom: -30px;
   }
 }
 
 .client__item {
   margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 767px) {
+  .client__item {
+    -ms-flex-preferred-size: calc((100% / 2) - 30px);
+        flex-basis: calc((100% / 2) - 30px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .client__item {
+    -ms-flex-preferred-size: calc((100% / 3) - 30px);
+        flex-basis: calc((100% / 3) - 30px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client__item {
+    -ms-flex-preferred-size: calc((100% / 6) - 30px);
+        flex-basis: calc((100% / 6) - 30px);
+    margin-bottom: 0;
+  }
+}
+
+.client__thumb {
+  min-width: 100%;
 }
 
 @media screen and (min-width: 480px) {
   .client__thumb {
-    -ms-flex-preferred-size: calc((100% / 2) - 30px);
-        flex-basis: calc((100% / 2) - 30px);
     min-width: 210px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .client__thumb {
-    -ms-flex-preferred-size: calc((100% / 3) - 30px);
-        flex-basis: calc((100% / 3) - 30px);
     min-width: 226px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .client__thumb {
-    -ms-flex-preferred-size: calc((100% / 6) - 30px);
-        flex-basis: calc((100% / 6) - 30px);
     min-width: 170px;
   }
 }
@@ -1035,6 +1057,10 @@ body {
   fill: #2196F3;
 }
 
+.footer {
+  background-color: #2F303A;
+}
+
 .footer__box {
   width: 100%;
   display: -webkit-box;
@@ -1067,7 +1093,6 @@ body {
 }
 
 .footer-contacts {
-  background-color: #2F303A;
   margin-top: 0;
   margin-bottom: 0;
 }
