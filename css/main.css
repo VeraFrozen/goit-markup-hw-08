@@ -37,11 +37,6 @@ body {
   background-color: #ffffff;
 }
 
-body * {
-  -webkit-box-shadow: 0 0 5px 1px #ff0000;
-          box-shadow: 0 0 5px 1px #ff0000;
-}
-
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -966,7 +961,7 @@ body * {
 }
 
 .clients__list {
-  margin-right: -30px;
+  margin: -15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -976,58 +971,31 @@ body * {
   .clients__list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-    margin-bottom: -30px;
   }
 }
 
 .client__item {
-  margin-right: 30px;
-  margin-bottom: 30px;
+  margin: 15px;
 }
 
 @media screen and (max-width: 767px) {
   .client__item {
-    -ms-flex-preferred-size: calc((100% / 2) - 30px);
-        flex-basis: calc((100% / 2) - 30px);
+    -ms-flex-preferred-size: calc((100% - 4 * 15px ) / 2);
+        flex-basis: calc((100% - 4 * 15px ) / 2);
   }
 }
 
 @media screen and (min-width: 768px) {
   .client__item {
-    -ms-flex-preferred-size: calc((100% / 3) - 30px);
-        flex-basis: calc((100% / 3) - 30px);
+    -ms-flex-preferred-size: calc((100% - 6 * 15px ) / 3);
+        flex-basis: calc((100% - 6 * 15px ) / 3);
   }
 }
 
 @media screen and (min-width: 1200px) {
   .client__item {
-    -ms-flex-preferred-size: calc((100% / 6) - 30px);
-        flex-basis: calc((100% / 6) - 30px);
-    margin-bottom: 0;
-  }
-}
-
-@media screen and (max-width: 479px) {
-  .client__thumb {
-    min-width: 130px;
-  }
-}
-
-@media screen and (min-width: 480px) {
-  .client__thumb {
-    min-width: 210px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .client__thumb {
-    min-width: 226px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .client__thumb {
-    min-width: 170px;
+    -ms-flex-preferred-size: calc((100% - 12 * 15px ) / 6);
+        flex-basis: calc((100% - 12 * 15px ) / 6);
   }
 }
 
@@ -1056,6 +1024,7 @@ body * {
 }
 
 .client__icon {
+  padding: 0;
   fill: #AFB1B8;
 }
 
