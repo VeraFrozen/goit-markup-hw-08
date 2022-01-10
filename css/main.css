@@ -37,6 +37,11 @@ body {
   background-color: #ffffff;
 }
 
+body * {
+  -webkit-box-shadow: 0 0 5px 1px #ff0000;
+          box-shadow: 0 0 5px 1px #ff0000;
+}
+
 .container {
   margin: 0 auto;
   padding: 0 15px;
@@ -333,19 +338,16 @@ body {
   margin-left: auto;
 }
 
-.mob-open-button__field,
-.mob-close__box {
-  background-color: transparent;
-}
-
 .mob-close__button {
   margin-top: -30px;
   margin-bottom: 0;
+  background-color: transparent;
 }
 
 .mob-open__button {
   margin-top: 10px;
   margin-bottom: 10px;
+  background-color: transparent;
 }
 
 .mob-open-button__field:hover .mob-open-button__icon,
@@ -1486,7 +1488,6 @@ body {
 }
 
 .portfolio-card__container {
-  margin: 0;
   padding-bottom: 60px;
 }
 
@@ -1504,9 +1505,9 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-right: -30px;
-  margin-bottom: -30px;
-  padding: 0;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: -15px;
   background-color: #ffffff;
 }
 
@@ -1516,8 +1517,6 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 }
 
@@ -1526,25 +1525,25 @@ body {
 }
 
 .portfolio-card__item {
-  max-width: 450px;
-  margin-right: 30px;
-  margin-bottom: 30px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 15px;
   background: #ffffff;
   border: 1px solid #EEEEEE;
 }
 
 @media screen and (min-width: 768px) {
   .portfolio-card__item {
-    -ms-flex-preferred-size: calc((100% / 2) - 30px);
-        flex-basis: calc((100% / 2) - 30px);
+    -ms-flex-preferred-size: calc((100% - 2 * 15px) / 2);
+        flex-basis: calc((100% - 2 * 15px) / 2);
     max-width: 354px;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .portfolio-card__item {
-    -ms-flex-preferred-size: calc((100% / 3) - 30px);
-        flex-basis: calc((100% / 3) - 30px);
+    -ms-flex-preferred-size: calc((100% - 4 * 15px) / 3);
+        flex-basis: calc((100% - 4 * 15px) / 3);
     max-width: 370px;
   }
 }

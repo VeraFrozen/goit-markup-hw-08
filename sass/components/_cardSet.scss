@@ -1,6 +1,6 @@
 //Портфолио работ
 .portfolio-card__container {
-    margin: 0;
+    //margin: 0;
     padding-bottom: 60px;
 
     @media screen and (min-width: 768px) {
@@ -9,16 +9,19 @@
 }
 
 .portfolio-card__set {
+    //width: 100%;
     display: flex;
     flex-direction: column;
-    margin-right: -30px;
-    margin-bottom: -30px;
-    padding: 0;
+    flex-wrap: wrap;
+    //margin-right: -30px;
+    //margin-bottom: -30px;
+    margin: -15px;
+    //padding: 0;
     background-color: $primary-white-color;
     
     @media screen and (min-width: 768px) {
         flex-direction: row;
-        flex-wrap: wrap;
+
     }    
 }  
 
@@ -27,19 +30,21 @@
 }
 
 .portfolio-card__item {
-    max-width: 450px;
-    margin-right: 30px;
-    margin-bottom: 30px;
+    //max-width: 450px;
+    //margin-right: 30px;
+    //margin-bottom: 30px;
+    box-sizing: border-box;
+    margin: 15px;
     background: $primary-white-color;
     border: 1px solid #EEEEEE;
 
     @media screen and (min-width: 768px) {
-        flex-basis: calc((100% / 2) - 30px);
+        flex-basis: calc((100% - 2 * 15px) / 2);
         max-width: 354px;
     }
 
     @media screen and (min-width: 1200px) {
-        flex-basis: calc((100% / 3) - 30px);
+        flex-basis: calc((100% - 4 * 15px) / 3);
         max-width: 370px;
     }
     
