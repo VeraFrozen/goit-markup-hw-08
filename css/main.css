@@ -333,16 +333,19 @@ body {
   margin-left: auto;
 }
 
+.mob-open-button__field,
+.mob-close__box {
+  background-color: transparent;
+}
+
 .mob-close__button {
   margin-top: -30px;
   margin-bottom: 0;
-  background: transparent;
 }
 
 .mob-open__button {
   margin-top: 10px;
   margin-bottom: 10px;
-  background: transparent;
 }
 
 .mob-open-button__field:hover .mob-open-button__icon,
