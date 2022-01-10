@@ -208,32 +208,28 @@
 .mob-close__button {
     margin-top: -30px;
     margin-bottom: 0;
+    background: transparent;
 }
 
 .mob-open__button {
     margin-top: 10px;
     margin-bottom: 10px;
+    background: transparent;
 }
 
-.mob-open-button__field {
+.mob-open-button__icon {
     
-    &:hover,
-    &:focus {
-
-        .mob-open-button__icon {
+    .mob-open-button__field:hover &,
+    .mob-open-button__field:focus & {
             fill: $accent-color;
-        }
     }
 }
 
-.mob-close__box {
-        
-    &:hover,
-    &:focus {
-
-        .mob-close-button__icon {
+.mob-close-button__icon {
+    
+    .mob-close__box:hover &,
+    .mob-close__box:focus & {
             fill: $accent-color;
-        }
     }
 }
 

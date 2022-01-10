@@ -10,16 +10,13 @@
 }
 
 .clients__list {
-    ul {
-        //width: 100%;
-        display: flex;
         margin-right: -30px;
+        display: flex;
 
         @media screen and (max-width: 1199px) {
             flex-wrap: wrap;
             margin-bottom: -30px;
         }
-    }    
 }
 
 .client__item {
@@ -42,7 +39,10 @@
 
 
 .client__thumb {
-    min-width: 100%;
+
+    @media screen and (max-width: 479px) {
+        min-width: 130px;
+    }
 
     @media screen and (min-width: 480px) {
         min-width: 210px;
